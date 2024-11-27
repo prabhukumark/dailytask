@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+        <p id="current-date">Today: </p>
+    </header>
+
+    <main>
+        <section id="communication">
+            <h2>Communication</h2>
+            <button class="add-task">Add Task</button>
+            <textarea id="communication-notes" class="notes" placeholder="Notes for Communication"></textarea>
+            <button class="complete-task">Complete Task</button>
+        </section>
+        <section id="college-work">
+            <h2>College Work</h2>
+            <button class="add-task">Add Task</button>
+            <textarea id="college-work-notes" class="notes" placeholder="Notes for College Work"></textarea>
+            <button class="complete-task">Complete Task</button>
+        </section>
+        <section id="technical-skills">
+            <h2>Technical Skills</h2>
+            <button class="add-task">Add Task</button>
+            <textarea id="technical-skills-notes" class="notes" placeholder="Notes for Technical Skills"></textarea>
+            <button class="complete-task">Complete Task</button>
+        </section>
+        <section id="interview-prep">
+            <h2>Interview Preparation</h2>
+            <button class="add-task">Add Task</button>
+            <textarea id="interview-prep-notes" class="notes" placeholder="Notes for Interview Preparation"></textarea>
+            <button class="complete-task">Complete Task</button>
+        </section>
+        <section id="entertainment">
+            <h2>Entertainment</h2>
+            <button class="add-task">Add Task</button>
+            <textarea id="entertainment-notes" class="notes" placeholder="Notes for Entertainment"></textarea>
+            <button class="complete-task">Complete Task</button>
+        </section>
+        <section id="food-bathing">
+            <h2>Food & Bathing</h2>
+            <button class="add-task">Add Task</button>
+            <textarea id="food-bathing-notes" class="notes" placeholder="Notes for Food & Bathing"></textarea>
+            <button class="complete-task">Complete Task</button>
+        </section>
+    </main>
+
+    <!-- History Section -->
+    <div id="history-section" style="display: none;">
+        <h2>View History</h2>
+        <ul id="history-list"></ul>
+    </div>
+
+    <footer>
+        <button id="view-history">View History</button>
+        <button id="save-day">Save Day</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  text-align: center;
+  padding: 20px 0; /* Reduced padding */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: fadeIn 1s ease-out, header3D 2s ease-in-out;
+  transform-style: preserve-3d; /* Enable 3D space */
+}
+
+header h1 {
+  font-size: 28px; /* Reduced font size */
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+  font-size: 16px; /* Reduced font size */
+  margin-top: 5px;
+}
+
+/* Main Content */
+main {
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Task Section Styling */
+section {
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button {
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #3e8e41;
+}
+
+/* Notes Area */
+.notes {
+  margin-top: 15px;
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: none;
+  font-size: 14px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.notes:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 15px 0; /* Reduced padding */
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-out, footer3D 2s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+footer button {
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+footer button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+footer button:active {
+  background-color: #3e8e41;
+}
+
+/* History Section */
+#history-section {
+  padding: 20px;
+  background: #f1f1f1;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#history-list {
+  list-style-type: none;
+}
+
+#history-list li {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+#history-list li:hover {
+  background-color: #f0f0f0;
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateX(-20px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* 3D Header Animation */
+@keyframes header3D {
+  0% {
+      transform: rotateX(-20deg) translateY(-10px);
+      opacity: 0;
+  }
+  100% {
+      transform: rotateX(0deg) translateY(0);
+      opacity: 1;
+  }
+}
+
+/* 3D Footer Animation */
+@keyframes footer3D {
+  0% {
+      transform: rotateX(20deg) translateY(10px);
+      opacity: 0;
+  }
+  100% {
+      transform: rotateX(0deg) translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+      grid-template-columns: 1fr;
+  }
+}
